@@ -9,6 +9,7 @@ if (TEXT.length < 1 || TEXT.length > 200) {
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 
+// Save the review as one plain-text file for the grader to read.
 try {
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "entry.txt"), TEXT);
